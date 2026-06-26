@@ -1,0 +1,594 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:RoKiSim_Desktop"
+        x:Class="RoKiSim_Desktop.MainWindow"
+        Title="RoKiSim 6.1 - Industrial Control Pendant"
+        Width="1400" Height="850"
+    Background="#0a0a0a">
+    <Window.Styles>
+        <Style Selector="Image.hudIdle">
+            <Setter Property="Opacity" Value="0.15"/>
+            <Style.Animations>
+                <Animation Duration="0:0:20" IterationCount="Infinite">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="RotateTransform.Angle" Value="0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="RotateTransform.Angle" Value="360"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+        <Style Selector="Image.hudSpeaking">
+            <Setter Property="Opacity" Value="0.4"/>
+            <Style.Animations>
+                <Animation Duration="0:0:5" IterationCount="Infinite">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="RotateTransform.Angle" Value="0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="RotateTransform.Angle" Value="-360"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </Window.Styles>
+    <Panel>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="RoKiSim 6.1 | TABLET READY" Foreground="#e67e22" FontFamily="Consolas" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Button x:Name="btnRepairMode" Grid.Column="1" Content="🔧 TAMİR MODU" Background="#8e44ad" Foreground="White" FontFamily="Consolas" FontWeight="Bold" CornerRadius="3" Margin="0,0,10,0" Click="OnRepairModeClick"/>
+            <Button x:Name="btnTourHelp" Grid.Column="2" Content="? YARDIM (TOUR)" Background="#3498db" Foreground="White" FontFamily="Consolas" FontWeight="Bold" CornerRadius="3" Margin="0,0,10,0"/>
+            <Border Grid.Column="3" Background="#c0392b" CornerRadius="3" Padding="10,5">
+                <TextBlock Text="SYS: OFFLINE" Foreground="White" FontFamily="Consolas" FontWeight="Bold"/>
+            </Border>
+        </Grid>
+        
+        <Border Grid.Row="0" BorderBrush="#e67e22" BorderThickness="0,0,0,2" VerticalAlignment="Bottom" Margin="0,0,0,-1"/>
+
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="360"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT COLUMN -->
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" Margin="0,0,10,0">
+            <StackPanel Spacing="15">
+                
+                <Border x:Name="pnlAI" Background="#111111" CornerRadius="4" BorderBrush="#9b59b6" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[MOD-AI] COMPUTER VISION" Foreground="#9b59b6" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        
+                        <!-- Webcam Feed Placeholder -->
+                        <Border Background="#050505" Height="160" BorderBrush="#333" BorderThickness="1" CornerRadius="2" Margin="0,0,0,10">
+                            <Grid>
+                                <TextBlock x:Name="txtWebcamOffline" Text="[WEBCAM FEED OFFLINE]" Foreground="#444" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Image x:Name="imgWebcam" Stretch="UniformToFill" IsVisible="False"/>
+                                <TextBlock x:Name="txtAiStatus" Text="SYS: AI INACTIVE" Foreground="#f1c40f" FontFamily="Consolas" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"/>
+                            </Grid>
+                        </Border>
+                        
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="ENABLE AI OVERRIDE:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <ToggleSwitch x:Name="toggleAiOverride" Grid.Column="1" IsChecked="False" OnContent="ON" OffContent="OFF" Foreground="#2ecc71" FontFamily="Consolas" FontWeight="Bold" MinWidth="0"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- AI ENGLISH PARTNER -->
+                <Border x:Name="pnlEnglishPartner" Background="#111111" CornerRadius="4" BorderBrush="#00d2d3" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[MOD-NLP] AI ENGLISH PARTNER" Foreground="#00d2d3" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="ACTIVATE PARTNER:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <ToggleSwitch x:Name="toggleAIPartner" Grid.Column="1" IsChecked="False" OnContent="ON" OffContent="OFF" Foreground="#00d2d3" FontFamily="Consolas" FontWeight="Bold" MinWidth="0"/>
+                        </Grid>
+
+                        <TextBlock Text="ENGLISH LEVEL:" Foreground="#888" FontFamily="Consolas" FontWeight="Bold" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbEnglishLevel" HorizontalAlignment="Stretch" SelectedIndex="0" Margin="0,0,0,10" Background="#050505" Foreground="White" FontFamily="Consolas">
+                            <ComboBoxItem Content="Beginner"/>
+                            <ComboBoxItem Content="Intermediate"/>
+                            <ComboBoxItem Content="Advanced"/>
+                        </ComboBox>
+
+                        <Border Background="#050505" Height="100" BorderBrush="#333" BorderThickness="1" CornerRadius="2" Margin="0,0,0,10" Padding="5">
+                            <ScrollViewer x:Name="scrollPartnerChat" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="pnlPartnerChatContainer" Spacing="2">
+                                    <TextBlock x:Name="txtPartnerChatStatus" Text="[AI PARTNER OFFLINE]" Foreground="#444" FontFamily="Consolas" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="txtPartnerInput" Grid.Column="0" Watermark="Type to chat or hold mic..." Background="White" Foreground="Black" CaretBrush="Black" FontFamily="Consolas" BorderBrush="#333" CornerRadius="2" Margin="0,0,5,0"/>
+                            <Button x:Name="btnPartnerSend" Grid.Column="1" Content="SEND" Background="#00d2d3" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" CornerRadius="2" Margin="0,0,5,0"/>
+                            <Button x:Name="btnPartnerMic" Grid.Column="2" Content="🎤" Background="#e74c3c" Foreground="White" FontFamily="Consolas" FontWeight="Bold" CornerRadius="2"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="pnlGamepad" Background="#111111" CornerRadius="4" BorderBrush="#e74c3c" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[HW] EXTERNAL GAMEPAD" Foreground="#e74c3c" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="ENABLE JOYSTICK:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <ToggleSwitch x:Name="toggleGamepad" Grid.Column="1" IsChecked="False" OnContent="ON" OffContent="OFF" Foreground="#e74c3c" FontFamily="Consolas" FontWeight="Bold" MinWidth="0"/>
+                        </Grid>
+                        <TextBlock x:Name="txtGamepadStatus" Text="SYS: JOYSTICK OFFLINE" Foreground="#555" FontFamily="Consolas" FontSize="10" Margin="0,5,0,10"/>
+                        <Button x:Name="btnConfigGamepad" Content="🎮 KONTROLLERİ ÖZELLEŞTİR" Background="#8e44ad" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="pnlTelemetry" Background="#111111" CornerRadius="4" BorderBrush="#f1c40f" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[DATA] REAL-TIME TELEMETRY" Foreground="#f1c40f" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock x:Name="posXText" Text="POS_X: 0.000" Foreground="#e67e22" FontFamily="Consolas"/>
+                                <TextBlock x:Name="posYText" Text="POS_Y: 0.000" Foreground="#27ae60" FontFamily="Consolas"/>
+                                <TextBlock x:Name="posZText" Text="POS_Z: 0.000" Foreground="#3498db" FontFamily="Consolas"/>
+                            </StackPanel>
+                            <Border Grid.Column="1" Width="1" Background="#444" Margin="10,0"/>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock x:Name="rollText" Text="ROLL :  0.0°" Foreground="#ccc" FontFamily="Consolas"/>
+                                <TextBlock x:Name="pitchText" Text="PITCH:  0.0°" Foreground="#ccc" FontFamily="Consolas"/>
+                                <TextBlock x:Name="yawText" Text="YAW  :  0.0°" Foreground="#ccc" FontFamily="Consolas"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Button x:Name="btnOpenScripting" Background="#9b59b6" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Height="45" CornerRadius="4">
+                    <TextBlock Text="💻 SİSTEM LOGLARI VE GÖREV DİZİSİ&#x0a;     (SCRIPT) AÇ" TextAlignment="Center" LineHeight="18"/>
+                </Button>
+
+                <Border x:Name="pnlOPC" Background="#111111" CornerRadius="4" BorderBrush="#2980b9" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[SYS] ENDÜSTRİYEL AĞ (OPC UA)" Foreground="#3498db" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        <TextBox x:Name="txtOpcUrl" Text="opc.tcp://127.0.0.1:4840" Background="#050505" Foreground="#00ff99" FontFamily="Consolas" BorderBrush="#333" Margin="0,0,0,10" Padding="5"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="btnOpcConnect" Grid.Column="0" Content="🔗 BAĞLAN" Background="#2980b9" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                            <Border Grid.Column="2" Background="#2c3e50" CornerRadius="3">
+                                <TextBlock x:Name="opcStatus" Text="🔴 OFFLINE" Foreground="#bdc3c7" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="pnlMCU" Background="#111111" CornerRadius="4" BorderBrush="#9b59b6" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[HW] MICROCONTROLLER LINK" Foreground="#9b59b6" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        <Grid Margin="0,0,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox x:Name="cmbMcuType" Grid.Column="0" SelectedIndex="0" HorizontalAlignment="Stretch" Background="#050505" Foreground="#f1c40f" FontFamily="Consolas">
+                                <ComboBoxItem>TCP/IP (Wi-Fi)</ComboBoxItem>
+                                <ComboBoxItem>Serial (USB)</ComboBoxItem>
+                            </ComboBox>
+                            <TextBox x:Name="txtMcuAddress" Grid.Column="2" Text="192.168.1.50:8080" Background="#050505" Foreground="#00ff99" FontFamily="Consolas" BorderBrush="#333" Padding="5"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="btnMcuConnect" Grid.Column="0" Content="🔗 BAĞLAN" Background="#8e44ad" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                            <Border Grid.Column="2" Background="#2c3e50" CornerRadius="3">
+                                <TextBlock x:Name="mcuStatus" Text="🔴 OFFLINE" Foreground="#bdc3c7" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="pnlIK" Background="#111111" CornerRadius="4" BorderBrush="#2ecc71" BorderThickness="1" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="[CMD] INVERSE KINEMATICS" Foreground="#2ecc71" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,15"/>
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="60"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="TRG_X:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <NumericUpDown x:Name="trgX" Grid.Column="1" Value="0.3" Background="#050505" Foreground="#00ff00" FontFamily="Consolas" BorderBrush="#333" ShowButtonSpinner="True" Increment="0.05"/>
+                        </Grid>
+                        <Grid Margin="0,0,0,8">
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="60"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="TRG_Y:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <NumericUpDown x:Name="trgY" Grid.Column="1" Value="0.0" Background="#050505" Foreground="#00ff00" FontFamily="Consolas" BorderBrush="#333" ShowButtonSpinner="True" Increment="0.05"/>
+                        </Grid>
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="60"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="TRG_Z:" Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <NumericUpDown x:Name="trgZ" Grid.Column="1" Value="0.4" Background="#050505" Foreground="#00ff00" FontFamily="Consolas" BorderBrush="#333" ShowButtonSpinner="True" Increment="0.05"/>
+                        </Grid>
+                        <Button x:Name="btnExecuteJog" Content="EXECUTE JOG" Background="#2ecc71" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3" Margin="0,0,0,10"/>
+                        <TextBlock Text="SYS: IDLE" Foreground="#888" FontFamily="Consolas" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#111111" CornerRadius="4" BorderBrush="#f39c12" BorderThickness="1" Padding="10" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="[CTRL] GRUP JOGLAMA (TEACH PENDANT)" Foreground="#f39c12" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="1.5*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Border Grid.Column="0" Background="#050505" BorderBrush="#333" BorderThickness="1" CornerRadius="3" Padding="5">
+                                <StackPanel>
+                                    <TextBlock Text="CARTESIAN (XYZ)" Foreground="#3498db" FontFamily="Consolas" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                    <UniformGrid Columns="2" Rows="3">
+                                        <Button x:Name="btnJogXMinus" Content="-X" Background="#2980b9" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogXPlus" Content="+X" Background="#2980b9" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogYMinus" Content="-Y" Background="#27ae60" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogYPlus" Content="+Y" Background="#27ae60" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogZMinus" Content="-Z" Background="#8e44ad" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogZPlus" Content="+Z" Background="#8e44ad" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                    </UniformGrid>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Grid.Column="2" Background="#050505" BorderBrush="#333" BorderThickness="1" CornerRadius="3" Padding="5">
+                                <StackPanel>
+                                    <TextBlock Text="JOINT (EKSEN 1-6)" Foreground="#e67e22" FontFamily="Consolas" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                    <UniformGrid Columns="4" Rows="3">
+                                        <Button x:Name="btnJogJ1Minus" Content="-J1" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ1Plus" Content="+J1" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ4Minus" Content="-J4" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ4Plus" Content="+J4" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        
+                                        <Button x:Name="btnJogJ2Minus" Content="-J2" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ2Plus" Content="+J2" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ5Minus" Content="-J5" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ5Plus" Content="+J5" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        
+                                        <Button x:Name="btnJogJ3Minus" Content="-J3" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ3Plus" Content="+J3" Background="#d35400" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ6Minus" Content="-J6" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                        <Button x:Name="btnJogJ6Plus" Content="+J6" Background="#e67e22" Foreground="White" Margin="2" CornerRadius="2" HorizontalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                    </UniformGrid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+
+            <!-- MIDDLE COLUMN -->
+            <Grid Grid.Column="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="0" Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="DİJİTAL İKİZ BÖLÜMÜ" Foreground="#e67e22" FontFamily="Consolas" FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                    <Button Grid.Column="1" Content="👁 GAZEBO PENCERESİNİ AÇ" Background="#3498db" Foreground="White" FontFamily="Consolas" FontWeight="Bold" CornerRadius="3" Click="BtnOpenGazebo_Click"/>
+                </Grid>
+
+                <Border Grid.Row="1" x:Name="border3DEnv" Background="#050505" CornerRadius="8" BorderBrush="#e67e22" BorderThickness="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <StackPanel Grid.Row="0" Margin="15,15,15,0" Spacing="10">
+                            <TextBlock Text="[SYS-01] 3D DIGITAL TWIN (LOCAL ENGINE)" Foreground="#888" FontWeight="Bold" FontFamily="Consolas"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="ORTAM: " Foreground="#888" FontFamily="Consolas" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="cbBgColor" Grid.Column="1" SelectedIndex="0" Background="#111" Foreground="#2ecc71" BorderBrush="#333" FontFamily="Consolas">
+                                    <ComboBoxItem>Siyah</ComboBoxItem>
+                                    <ComboBoxItem>Koyu Gri</ComboBoxItem>
+                                    <ComboBoxItem>Gece Mavisi</ComboBoxItem>
+                                    <ComboBoxItem>Endüstriyel Yeşil</ComboBoxItem>
+                                </ComboBox>
+                                <Button Grid.Column="3" Content="🌐 AR'Yİ BAŞLAT" Background="#2ecc71" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" CornerRadius="3"/>
+                            </Grid>
+                        </StackPanel>
+                        
+                        <!-- 3D CANVASES -->
+                        <Canvas Grid.Row="1" x:Name="RobotCanvas" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="False"/>
+                        <local:RobotRenderer Grid.Row="1" x:Name="ModelCanvas" Width="600" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        
+                        <Button Grid.Row="2" Content="WEBXR NOT AVAILABLE" Background="#27ae60" Foreground="#111" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" CornerRadius="3" Margin="0,0,0,15" Opacity="0.7"/>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- RIGHT COLUMN -->
+            <Border Grid.Column="2" Background="#111111" CornerRadius="8" Margin="5" BorderBrush="#f1c40f" BorderThickness="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="10" Spacing="15">
+                    
+                    <Border Background="#050505" BorderBrush="#333" BorderThickness="1" CornerRadius="4" Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="[MATH] DENAVIT-HARTENBERG (DH) TABLOSU" Foreground="#f1c40f" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,10"/>
+                            
+                            <Grid Margin="0,0,0,8">
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="İ (Link)" Foreground="#f1c40f" FontFamily="Consolas" FontSize="11" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="1" Text="θ (Theta)" Foreground="#f1c40f" FontFamily="Consolas" FontSize="11" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="2" Text="d (mm)" Foreground="#f1c40f" FontFamily="Consolas" FontSize="11" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="3" Text="a (mm)" Foreground="#f1c40f" FontFamily="Consolas" FontSize="11" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="4" Text="α (Alpha)" Foreground="#f1c40f" FontFamily="Consolas" FontSize="11" FontWeight="Bold"/>
+                            </Grid>
+                            
+                            <Grid Margin="0,0,0,3"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="1 (Base)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta1" Grid.Column="1" Text="0.0°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="330" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="50" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="-90°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            <Grid Margin="0,0,0,3"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="2 (Shldr)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta2" Grid.Column="1" Text="-115.8°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="330" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="0°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            <Grid Margin="0,0,0,3"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="3 (Elbow)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta3" Grid.Column="1" Text="68.8°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="35" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="-90°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            <Grid Margin="0,0,0,3"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="4 (Wrst1)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta4" Grid.Column="1" Text="11.5°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="335" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="90°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            <Grid Margin="0,0,0,3"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="5 (Wrst2)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta5" Grid.Column="1" Text="20.1°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="-90°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            <Grid Margin="0,0,0,5"><Grid.ColumnDefinitions><ColumnDefinition Width="2*"/><ColumnDefinition Width="2*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/><ColumnDefinition Width="1.5*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="6 (Flange)" Foreground="#ccc" FontFamily="Consolas" FontSize="11"/><TextBlock x:Name="dhTheta6" Grid.Column="1" Text="0.0°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="2" Text="80" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="3" Text="0" Foreground="#fff" FontFamily="Consolas" FontSize="11"/><TextBlock Grid.Column="4" Text="0°" Foreground="#fff" FontFamily="Consolas" FontSize="11"/></Grid>
+                            
+                            <TextBlock Text="* Değerler FANUC LR Mate 200iD referansıdır." Foreground="#666" FontFamily="Consolas" FontSize="9" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Background="#050505" BorderBrush="#333" BorderThickness="1" CornerRadius="4" Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="[CTRL] TRIPLE ANALOG OVERRIDE" Foreground="#e74c3c" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,15"/>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                                
+                                <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                                    <TextBlock Text="BASE&#x0a;SHLDR" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,8"/>
+                                    <Border x:Name="joy1Base" Width="64" Height="64" CornerRadius="32" BorderBrush="#333" BorderThickness="4" Background="#111">
+                                        <Border x:Name="joy1Thumb" Width="28" Height="28" CornerRadius="14" Background="#3498db" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                                    <TextBlock Text="ELBOW&#x0a;WRST-1" Foreground="#2ecc71" FontFamily="Consolas" FontSize="10" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,8"/>
+                                    <Border x:Name="joy2Base" Width="64" Height="64" CornerRadius="32" BorderBrush="#333" BorderThickness="4" Background="#111">
+                                        <Border x:Name="joy2Thumb" Width="28" Height="28" CornerRadius="14" Background="#2ecc71" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                                    <TextBlock Text="WRST-2&#x0a;FLANGE" Foreground="#9b59b6" FontFamily="Consolas" FontSize="10" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,8"/>
+                                    <Border x:Name="joy3Base" Width="64" Height="64" CornerRadius="32" BorderBrush="#333" BorderThickness="4" Background="#111">
+                                        <Border x:Name="joy3Thumb" Width="28" Height="28" CornerRadius="14" Background="#9b59b6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Spacing="8">
+                        <Border BorderBrush="#333" BorderThickness="0,1,0,0" Margin="0,5,0,5" Padding="0,10,0,0">
+                            <TextBlock Text="[DATA] TELEMETRİ MERKEZİ" Foreground="#aaa" FontFamily="Consolas" FontSize="11" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        </Border>
+                        
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <Button x:Name="btnTelKonum" Grid.Column="0" Content="📈 KONUM" Background="#3498db" Foreground="White" FontFamily="Consolas" FontWeight="Bold" Margin="0,0,2,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                            <Button x:Name="btnTelTork" Grid.Column="1" Content="⚡ TORK" Background="#e67e22" Foreground="White" FontFamily="Consolas" FontWeight="Bold" Margin="2,0,2,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                            <Button x:Name="btnTelTcp" Grid.Column="2" Content="🚀 TCP HIZ" Background="#9b59b6" Foreground="White" FontFamily="Consolas" FontWeight="Bold" Margin="2,0,0,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <Button x:Name="btnExportCsv" Grid.Column="0" Content="📥 TELEMETRİ VERİSİNİ DIŞA AKTAR (.CSV)" Background="#112211" Foreground="#1abc9c" BorderBrush="#1abc9c" BorderThickness="1" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" CornerRadius="3" Margin="0,0,5,0"/>
+                            <TextBlock x:Name="txtRecordCount" Grid.Column="1" Text="0 KAYIT" Foreground="#555" FontFamily="Consolas" FontSize="10" VerticalAlignment="Center" Margin="5,0"/>
+                        </Grid>
+
+                        <Button x:Name="btnShowAxes" Content="📌 EKSENLERİ GÖSTER (X-Y-Z)" Background="#8e44ad" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                        <Button x:Name="btnShowWorkspace" Content="🌐 WORKSPACE GÖSTER" Background="#2980b9" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                        <Button x:Name="btnHome" Content="🏠 ROBOTU HOME KONUMUNA ÇEK (SAFE RESET)" Background="#2c3e50" Foreground="#f1c40f" BorderBrush="#f1c40f" BorderThickness="1" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3"/>
+
+                        <Grid x:Name="pnlTeach" Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="TEACH PENDANT:" Foreground="#ccc" FontFamily="Consolas" VerticalAlignment="Center"/>
+                            <Button x:Name="btnRec" Grid.Column="1" Content="🔴 REC" Background="#c0392b" Foreground="White" FontFamily="Consolas" FontWeight="Bold" Margin="0,0,5,0" Width="100" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                            <Button x:Name="btnPlay" Grid.Column="2" Content="▶️ PLAY" Background="#27ae60" Foreground="White" FontFamily="Consolas" FontWeight="Bold" Width="80" HorizontalContentAlignment="Center" CornerRadius="3"/>
+                        </Grid>
+                    </StackPanel>
+                    <Border x:Name="pnlJog" Background="#111111" CornerRadius="4" BorderBrush="#3498db" BorderThickness="1" Padding="10" Margin="0,15,0,0">
+                            <StackPanel>
+                                <TextBlock Text="[JOG] JOINT DIAGNOSTICS" Foreground="#3498db" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,15"/>
+                                
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J7_TRACK:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j7_s" Minimum="-1000" Maximum="1000" Value="0" Margin="10,0" Foreground="#9b59b6"/><TextBlock Grid.Column="2" Text="{Binding #j7_s.Value, StringFormat='{}{0:0.0}&#x0a;mm'}" Foreground="#fff" FontFamily="Consolas" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J1_BASE&#x0a;:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j1_s" Minimum="-160" Maximum="160" Value="0" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #j1_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J2_SHLDR:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j2_s" Minimum="-60" Maximum="60" Value="-25.78" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #j2_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J3_ELBOW:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j3_s" Minimum="-60" Maximum="60" Value="68.75" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #j3_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J4_WRST1:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j4_s" Minimum="-160" Maximum="160" Value="11.46" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #j4_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,8"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J5_WRST2:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j5_s" Minimum="-60" Maximum="60" Value="20.05" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #j5_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                                <Grid Margin="0,0,0,5"><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="J6_FLNGE:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="j6_s" Minimum="-160" Maximum="160" Value="0" Margin="10,0" Foreground="#ccc"/><TextBlock Grid.Column="2" Text="{Binding #j6_s.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#111111" CornerRadius="4" BorderBrush="#e67e22" BorderThickness="1" Padding="10" Margin="0,15,0,0">
+                            <StackPanel>
+                                <TextBlock Text="[ACT] END EFFECTOR" Foreground="#e67e22" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,15"/>
+                                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="JAW_GAP&#x0a;:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="grip_s" Minimum="0" Maximum="125" Value="30" Margin="10,0" Foreground="#e67e22"/><TextBlock Grid.Column="2" Text="{Binding #grip_s.Value, StringFormat='{}{0:0.00}&#x0a;mm'}" Foreground="#fff" FontFamily="Consolas" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#111111" CornerRadius="4" BorderBrush="#95a5a6" BorderThickness="1" Padding="10" Margin="0,15,0,10">
+                            <StackPanel>
+                                <TextBlock Text="[CAM] ORBIT CONTROL" Foreground="#95a5a6" FontWeight="Bold" FontFamily="Consolas" Margin="0,0,0,15"/>
+                                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/><ColumnDefinition Width="55"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="AZIMUTH&#x0a;:" Foreground="#ccc" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center"/><Slider Grid.Column="1" x:Name="cam_slider" Minimum="-180" Maximum="180" Value="0" Margin="10,0" Foreground="#95a5a6"/><TextBlock Grid.Column="2" Text="{Binding #cam_slider.Value, StringFormat='{}{0:0.00}°'}" Foreground="#fff" FontFamily="Consolas" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Right"/></Grid>
+                            </StackPanel>
+                        </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+    
+    <!-- FLOATING DATA PANELS -->
+    <Border Grid.RowSpan="3" x:Name="pnlTorque" IsVisible="False" Background="#050505" BorderBrush="#e67e22" BorderThickness="2" CornerRadius="4" Width="280" Height="280" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" ZIndex="100">
+        <Grid>
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+            <Grid x:Name="pnlTorqueHeader" Background="#221100" Cursor="Hand">
+                <TextBlock Text="[DATA] MOTOR LOAD &amp; TORQUE (%)" Margin="5" Foreground="#e67e22" FontFamily="Consolas" FontWeight="Bold"/>
+                <Button x:Name="btnCloseTorque" Content="X" Background="#c0392b" Foreground="White" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" FontWeight="Bold"/>
+            </Grid>
+            <StackPanel Grid.Row="1" Margin="10" Spacing="15">
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J1 BASE" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ1" Background="#2ecc71" Width="30" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J2 SHLDR" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ2" Background="#f39c12" Width="180" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J3 ELBOW" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ3" Background="#2ecc71" Width="100" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J4 WRST1" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ4" Background="#2ecc71" Width="15" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J5 WRST2" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ5" Background="#2ecc71" Width="20" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="70"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="J6 GRIP" Foreground="White" FontFamily="Consolas" FontWeight="Bold" VerticalAlignment="Center"/><Grid Grid.Column="1" Height="20" Background="#111"><Border x:Name="barJ6" Background="#2ecc71" Width="10" HorizontalAlignment="Left"/></Grid></Grid>
+                <Grid Margin="70,5,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Grid.Column="0" Text="0" Foreground="#888" FontSize="9"/><TextBlock Grid.Column="1" Text="20" Foreground="#888" FontSize="9"/><TextBlock Grid.Column="2" Text="40" Foreground="#888" FontSize="9"/><TextBlock Grid.Column="3" Text="60" Foreground="#888" FontSize="9"/><TextBlock Grid.Column="4" Text="80" Foreground="#888" FontSize="9"/><TextBlock Grid.Column="5" Text="100" Foreground="#888" FontSize="9"/></Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+
+    <Border Grid.RowSpan="3" x:Name="pnlVelocity" IsVisible="False" Background="#050505" BorderBrush="#9b59b6" BorderThickness="2" CornerRadius="4" Width="280" Height="250" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50" ZIndex="100">
+        <Grid>
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+            <Grid x:Name="pnlVelocityHeader" Background="#1a001a" Cursor="Hand">
+                <TextBlock Text="[DATA] TCP KINEMATIC VELOCITY (m/s)" Margin="5" Foreground="#9b59b6" FontFamily="Consolas" FontWeight="Bold"/>
+                <Button x:Name="btnCloseVelocity" Content="X" Background="#c0392b" Foreground="White" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" FontWeight="Bold"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="10,10,10,20">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="30"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" VerticalAlignment="Stretch" Spacing="3">
+                    <TextBlock Text="1.0" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.9" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.8" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.7" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.6" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.5" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.4" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.3" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.2" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0.1" Foreground="#888" FontSize="10" Height="15"/><TextBlock Text="0" Foreground="#888" FontSize="10" Height="15"/>
+                </StackPanel>
+                <Canvas x:Name="canvasVelocity" Grid.Column="1" Background="#111" ClipToBounds="True">
+                    <Polyline x:Name="polyVelocity" Stroke="#9b59b6" StrokeThickness="2" />
+                </Canvas>
+            </Grid>
+        </Grid>
+    </Border>
+
+    <Border Grid.RowSpan="3" x:Name="pnlPosition" IsVisible="False" Background="#050505" BorderBrush="#3498db" BorderThickness="2" CornerRadius="4" Width="300" Height="480" HorizontalAlignment="Center" VerticalAlignment="Center" ZIndex="100">
+        <Grid>
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+            <Grid x:Name="pnlPositionHeader" Background="#001122" Cursor="Hand">
+                <TextBlock Text="[DATA] JOINT POSITIONS (DEG)" Margin="5" Foreground="#3498db" FontFamily="Consolas" FontWeight="Bold"/>
+                <Button x:Name="btnClosePosition" Content="X" Background="#c0392b" Foreground="White" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" FontWeight="Bold"/>
+            </Grid>
+            <StackPanel Grid.Row="1" Margin="10" Spacing="4">
+                <TextBlock Text="> MOTOR J1 - BASE POSITION" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ1" ClipToBounds="True"><Polyline x:Name="polyJ1" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+                <TextBlock Text="> MOTOR J2 - SHOULDER POSITION" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ2" ClipToBounds="True"><Polyline x:Name="polyJ2" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+                <TextBlock Text="> MOTOR J3 - ELBOW POSITION" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ3" ClipToBounds="True"><Polyline x:Name="polyJ3" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+                <TextBlock Text="> MOTOR J4 - WRIST ROLL" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ4" ClipToBounds="True"><Polyline x:Name="polyJ4" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+                <TextBlock Text="> MOTOR J5 - WRIST PITCH" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ5" ClipToBounds="True"><Polyline x:Name="polyJ5" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+                <TextBlock Text="> MOTOR J6 - FLANGE" Foreground="#3498db" FontFamily="Consolas" FontSize="10" FontWeight="Bold"/>
+                <Border Height="40" Background="#111" BorderBrush="#222" BorderThickness="1"><Canvas x:Name="canvasJ6" ClipToBounds="True"><Polyline x:Name="polyJ6" Stroke="#3498db" StrokeThickness="2"/></Canvas></Border>
+            </StackPanel>
+        </Grid>
+    </Border>
+
+    <!-- EVENT LOGS & SCRIPTING OVERLAY -->
+    <Border Grid.RowSpan="2" x:Name="pnlScripting" IsVisible="False" Background="#0f0f0f" CornerRadius="4" BorderBrush="#9b59b6" BorderThickness="2" Width="800" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" ZIndex="998" BoxShadow="0 10 30 0 #88000000">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid x:Name="pnlScriptingHeader" Grid.Row="0" Background="#1a1a1a" Margin="10">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="[SYS] EVENT LOGS &amp; MACRO SCRIPTING" Foreground="#9b59b6" FontWeight="Bold" FontFamily="Consolas" FontSize="16" VerticalAlignment="Center"/>
+                <Button x:Name="btnCloseScripting" Grid.Column="1" Content="X" Background="#c0392b" Foreground="White" FontWeight="Bold" FontFamily="Consolas" Padding="8,4" CornerRadius="3"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text=">_ SYSTEM EVENT LOGS" Foreground="#888" FontFamily="Consolas" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ListBox x:Name="lstLogs" Background="#050505" Foreground="#ccc" FontFamily="Consolas" BorderBrush="#333" BorderThickness="1" Height="400" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text=">_ TASK SEQUENCER (RoKiScript)" Foreground="#888" FontFamily="Consolas" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtScript" Background="#050505" Foreground="#f1c40f" FontFamily="Consolas" BorderBrush="#333" BorderThickness="1" Height="355" AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,0,0,10"/>
+                    <Button x:Name="btnRunScript" Content="▶ SENARYOYU ÇALIŞTIR" Background="#2ecc71" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" CornerRadius="3" Height="35"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+
+    <!-- TOUR OVERLAY (POPUP) -->
+    <Popup Grid.RowSpan="2" x:Name="tourPopup" IsOpen="False" Placement="Right" HorizontalOffset="10" VerticalOffset="10" ZIndex="999">
+        <Border Background="#e67e22" CornerRadius="8" Padding="15" Width="300" BorderBrush="#d35400" BorderThickness="2" BoxShadow="0 10 30 0 #88000000">
+            <StackPanel>
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="tourTitle" Grid.Column="0" Text="1/6 - DİJİTAL İKİZ" Foreground="White" FontWeight="Bold" FontFamily="Consolas" FontSize="16" VerticalAlignment="Center"/>
+                    <Button x:Name="btnTourClose" Grid.Column="1" Content="X" Background="Transparent" Foreground="White" FontWeight="Bold" Cursor="Hand" Padding="5"/>
+                </Grid>
+                <TextBlock x:Name="tourDesc" Text="Açıklama metni" Foreground="#222" TextWrapping="Wrap" FontFamily="Consolas" Margin="0,0,0,15"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnTourPrev" Grid.Column="0" Content="&lt; ÖNCEKİ" Background="#d35400" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="btnTourNext" Grid.Column="2" Content="SONRAKİ &gt;" Background="#2c3e50" Foreground="White" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Popup>
+
+    </Grid>
+        <Image x:Name="imgJarvisBg" Source="avares://RoKiSim_Desktop/Assets/jarvis_hud.png" Stretch="Uniform" IsVisible="False" Classes="hudIdle" IsHitTestVisible="False">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Panel>
+</Window>

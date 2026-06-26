@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="RoKiSim_Desktop.GazeboWindow"
+        Title="Gazebo Kamera Görünümü (Gripper)"
+        Width="800" Height="600"
+        Background="#1e1e1e"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#2c3e50" Padding="10">
+            <TextBlock x:Name="txtStatus" Text="🔴 Gazebo Kamerasına Bağlanılıyor..." 
+                       Foreground="White" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Camera Image -->
+        <Image Grid.Row="1" x:Name="imgCamera" Stretch="Uniform" Margin="10"/>
+    </Grid>
+</Window>

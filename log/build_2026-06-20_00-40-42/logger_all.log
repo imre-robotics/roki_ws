@@ -1,0 +1,1266 @@
+[0.181s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.181s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7e7245a9a3b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e7245a99e70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e7245a99e70>>)
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.460s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/main/roki_ws'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'ignore_ament_install'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['colcon_pkg']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'colcon_pkg'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['colcon_meta']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'colcon_meta'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'ignore_ament_install'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'colcon_pkg'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['colcon_meta']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'colcon_meta'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Assets) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'ignore_ament_install'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'colcon_pkg'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['colcon_meta']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'colcon_meta'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'ignore_ament_install'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'colcon_pkg'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['colcon_meta']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'colcon_meta'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'ros'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['cmake', 'python']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'cmake'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'python'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extensions ['python_setup_py']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App) by extension 'python_setup_py'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'ros'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['cmake', 'python']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'cmake'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'python'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extensions ['python_setup_py']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/certs) by extension 'python_setup_py'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'ros'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['cmake', 'python']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'cmake'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'python'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extensions ['python_setup_py']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/App/private) by extension 'python_setup_py'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'cmake'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'python'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extensions ['python_setup_py']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted) by extension 'python_setup_py'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['colcon_pkg']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'colcon_pkg'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'cmake'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'python'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extensions ['python_setup_py']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/CertificateStores/Trusted/certs) by extension 'python_setup_py'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['colcon_pkg']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'colcon_pkg'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'cmake'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'python'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extensions ['python_setup_py']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/Models) by extension 'python_setup_py'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['ros']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'ros'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['cmake', 'python']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'cmake'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'python'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extensions ['python_setup_py']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin) by extension 'python_setup_py'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['ros']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'ros'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['cmake', 'python']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'cmake'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'python'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extensions ['python_setup_py']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug) by extension 'python_setup_py'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'ros'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['cmake', 'python']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'cmake'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'python'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extensions ['python_setup_py']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0) by extension 'python_setup_py'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'ros'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['cmake', 'python']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'cmake'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'python'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extensions ['python_setup_py']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/Models) by extension 'python_setup_py'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'ros'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['cmake', 'python']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'cmake'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'python'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extensions ['python_setup_py']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes) by extension 'python_setup_py'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'ros'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['cmake', 'python']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'cmake'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'python'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extensions ['python_setup_py']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm) by extension 'python_setup_py'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'ros'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['cmake', 'python']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'cmake'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'python'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extensions ['python_setup_py']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm/native) by extension 'python_setup_py'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['colcon_pkg']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['colcon_meta']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'ros'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['cmake', 'python']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'cmake'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'python'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extensions ['python_setup_py']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64) by extension 'python_setup_py'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['colcon_pkg']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['colcon_meta']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['ros']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'ros'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['cmake', 'python']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'cmake'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'python'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extensions ['python_setup_py']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-arm64/native) by extension 'python_setup_py'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['colcon_pkg']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'colcon_pkg'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['colcon_meta']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'colcon_meta'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'ignore_ament_install'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x64/native) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'ignore_ament_install'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'ignore_ament_install'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/android-x86/native) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm/native) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'ros'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['cmake', 'python']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-arm64/native) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'ros'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['cmake', 'python']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-arm64/native) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-bionic-x64/native) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-loongarch64/native) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'cmake'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'python'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extensions ['python_setup_py']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'ros'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'cmake'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'python'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extensions ['python_setup_py']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm/native) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'ros'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'cmake'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'python'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extensions ['python_setup_py']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'ros'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['cmake', 'python']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-arm64/native) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'ros'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['cmake', 'python']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'ros'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['cmake', 'python']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-loongarch64/native) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-riscv64/native) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'ros'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['cmake', 'python']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'cmake'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'python'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extensions ['python_setup_py']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-musl-x64/native) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'ros'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['cmake', 'python']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'cmake'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'python'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extensions ['python_setup_py']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'ros'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['cmake', 'python']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'cmake'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'python'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extensions ['python_setup_py']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-riscv64/native) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'ros'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['cmake', 'python']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'cmake'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'python'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extensions ['python_setup_py']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64) by extension 'python_setup_py'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'ignore_ament_install'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['colcon_pkg']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'colcon_pkg'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['colcon_meta']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'colcon_meta'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['ros']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'ros'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['cmake', 'python']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'cmake'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'python'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extensions ['python_setup_py']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x64/native) by extension 'python_setup_py'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'ignore_ament_install'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['colcon_pkg']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'colcon_pkg'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['colcon_meta']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'colcon_meta'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['ros']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'ros'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['cmake', 'python']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'cmake'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'python'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extensions ['python_setup_py']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86) by extension 'python_setup_py'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'ignore_ament_install'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['colcon_pkg']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'colcon_pkg'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['colcon_meta']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'colcon_meta'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['ros']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'ros'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['cmake', 'python']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'cmake'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'python'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extensions ['python_setup_py']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/linux-x86/native) by extension 'python_setup_py'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'ignore'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'ignore_ament_install'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['colcon_pkg']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'colcon_pkg'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['colcon_meta']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'colcon_meta'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['ros']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'ros'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['cmake', 'python']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'cmake'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'python'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extensions ['python_setup_py']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64) by extension 'python_setup_py'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'ignore'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'ignore_ament_install'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['colcon_pkg']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'colcon_pkg'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['colcon_meta']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'colcon_meta'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['ros']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'ros'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['cmake', 'python']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'cmake'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'python'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extensions ['python_setup_py']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-arm64/native) by extension 'python_setup_py'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'ignore'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'ignore_ament_install'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['colcon_pkg']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'colcon_pkg'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['colcon_meta']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'colcon_meta'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['ros']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'ros'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['cmake', 'python']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'cmake'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'python'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extensions ['python_setup_py']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64) by extension 'python_setup_py'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'ignore'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'ignore_ament_install'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['colcon_pkg']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'colcon_pkg'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['colcon_meta']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'colcon_meta'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['ros']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'ros'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['cmake', 'python']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'cmake'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'python'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extensions ['python_setup_py']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/maccatalyst-x64/native) by extension 'python_setup_py'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['ignore', 'ignore_ament_install']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'ignore'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'ignore_ament_install'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['colcon_pkg']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'colcon_pkg'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['colcon_meta']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'colcon_meta'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['ros']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'ros'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['cmake', 'python']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'cmake'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'python'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extensions ['python_setup_py']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx) by extension 'python_setup_py'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['ignore', 'ignore_ament_install']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'ignore'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'ignore_ament_install'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['colcon_pkg']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'colcon_pkg'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['colcon_meta']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'colcon_meta'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['ros']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'ros'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['cmake', 'python']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'cmake'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'python'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extensions ['python_setup_py']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx/native) by extension 'python_setup_py'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'ignore'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'ignore_ament_install'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['colcon_pkg']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'colcon_pkg'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['colcon_meta']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'colcon_meta'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['ros']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'ros'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['cmake', 'python']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'cmake'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'python'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extensions ['python_setup_py']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64) by extension 'python_setup_py'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'ignore'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'ignore_ament_install'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['colcon_pkg']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'colcon_pkg'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['colcon_meta']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'colcon_meta'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['ros']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'ros'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['cmake', 'python']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'cmake'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'python'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extensions ['python_setup_py']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-arm64/native) by extension 'python_setup_py'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'ignore_ament_install'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['colcon_pkg']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'colcon_pkg'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['colcon_meta']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'colcon_meta'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['ros']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'ros'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['cmake', 'python']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'cmake'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'python'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extensions ['python_setup_py']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64) by extension 'python_setup_py'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'ignore_ament_install'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['colcon_pkg']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'colcon_pkg'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['colcon_meta']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'colcon_meta'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['ros']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'ros'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['cmake', 'python']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'cmake'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'python'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extensions ['python_setup_py']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native) by extension 'python_setup_py'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'ignore_ament_install'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['colcon_pkg']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'colcon_pkg'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['colcon_meta']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'colcon_meta'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['ros']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'ros'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['cmake', 'python']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'cmake'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'python'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extensions ['python_setup_py']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix) by extension 'python_setup_py'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'ignore_ament_install'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['colcon_pkg']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'colcon_pkg'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['colcon_meta']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'colcon_meta'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['ros']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'ros'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['cmake', 'python']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'cmake'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'python'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extensions ['python_setup_py']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib) by extension 'python_setup_py'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'ignore_ament_install'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['colcon_pkg']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'colcon_pkg'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['colcon_meta']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'colcon_meta'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['ros']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'ros'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['cmake', 'python']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'cmake'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'python'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extensions ['python_setup_py']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0) by extension 'python_setup_py'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'ignore_ament_install'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['colcon_pkg']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'colcon_pkg'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['colcon_meta']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'colcon_meta'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['ros']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'ros'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['cmake', 'python']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'cmake'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'python'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extensions ['python_setup_py']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/netstandard2.0) by extension 'python_setup_py'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['ignore', 'ignore_ament_install']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'ignore'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'ignore_ament_install'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['colcon_pkg']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'colcon_pkg'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['colcon_meta']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'colcon_meta'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['ros']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'ros'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['cmake', 'python']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'cmake'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'python'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extensions ['python_setup_py']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win) by extension 'python_setup_py'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['ignore', 'ignore_ament_install']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'ignore'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'ignore_ament_install'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['colcon_pkg']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'colcon_pkg'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['colcon_meta']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'colcon_meta'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['ros']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'ros'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['cmake', 'python']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'cmake'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'python'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extensions ['python_setup_py']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib) by extension 'python_setup_py'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['ignore', 'ignore_ament_install']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'ignore'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'ignore_ament_install'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['colcon_pkg']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'colcon_pkg'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['colcon_meta']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'colcon_meta'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['ros']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'ros'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['cmake', 'python']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'cmake'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'python'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extensions ['python_setup_py']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net6.0) by extension 'python_setup_py'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['ignore', 'ignore_ament_install']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'ignore'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'ignore_ament_install'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['colcon_pkg']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'colcon_pkg'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['colcon_meta']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'colcon_meta'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['ros']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'ros'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['cmake', 'python']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'cmake'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'python'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extensions ['python_setup_py']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0) by extension 'python_setup_py'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['ignore', 'ignore_ament_install']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'ignore'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'ignore_ament_install'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['colcon_pkg']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'colcon_pkg'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['colcon_meta']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'colcon_meta'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['ros']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'ros'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['cmake', 'python']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'cmake'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'python'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extensions ['python_setup_py']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0) by extension 'python_setup_py'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['ignore', 'ignore_ament_install']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'ignore'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'ignore_ament_install'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['colcon_pkg']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'colcon_pkg'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['colcon_meta']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'colcon_meta'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['ros']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'ros'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['cmake', 'python']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'cmake'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'python'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extensions ['python_setup_py']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64) by extension 'python_setup_py'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'ignore'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'ignore_ament_install'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['colcon_pkg']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'colcon_pkg'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['colcon_meta']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'colcon_meta'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['ros']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'ros'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['cmake', 'python']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'cmake'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'python'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extensions ['python_setup_py']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-arm64/native) by extension 'python_setup_py'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['ignore', 'ignore_ament_install']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'ignore'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'ignore_ament_install'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['colcon_pkg']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'colcon_pkg'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['colcon_meta']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'colcon_meta'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['ros']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'ros'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['cmake', 'python']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'cmake'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'python'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extensions ['python_setup_py']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64) by extension 'python_setup_py'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['ignore', 'ignore_ament_install']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'ignore'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'ignore_ament_install'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['colcon_pkg']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'colcon_pkg'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['colcon_meta']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'colcon_meta'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['ros']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'ros'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['cmake', 'python']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'cmake'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'python'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extensions ['python_setup_py']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x64/native) by extension 'python_setup_py'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['ignore', 'ignore_ament_install']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'ignore'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'ignore_ament_install'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['colcon_pkg']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'colcon_pkg'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['colcon_meta']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'colcon_meta'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['ros']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'ros'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['cmake', 'python']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'cmake'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'python'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extensions ['python_setup_py']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86) by extension 'python_setup_py'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['ignore', 'ignore_ament_install']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'ignore'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'ignore_ament_install'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['colcon_pkg']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'colcon_pkg'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['colcon_meta']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'colcon_meta'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['ros']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'ros'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['cmake', 'python']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'cmake'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'python'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extensions ['python_setup_py']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win-x86/native) by extension 'python_setup_py'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['ignore', 'ignore_ament_install']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'ignore'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'ignore_ament_install'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['colcon_pkg']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'colcon_pkg'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['colcon_meta']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'colcon_meta'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['ros']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'ros'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['cmake', 'python']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'cmake'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'python'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extensions ['python_setup_py']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj) by extension 'python_setup_py'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['ignore', 'ignore_ament_install']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'ignore'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'ignore_ament_install'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['colcon_pkg']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'colcon_pkg'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['colcon_meta']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'colcon_meta'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['ros']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'ros'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['cmake', 'python']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'cmake'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'python'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extensions ['python_setup_py']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug) by extension 'python_setup_py'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['ignore', 'ignore_ament_install']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'ignore'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'ignore_ament_install'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['colcon_pkg']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'colcon_pkg'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['colcon_meta']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'colcon_meta'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['ros']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['cmake', 'python']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'python'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extensions ['python_setup_py']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0) by extension 'python_setup_py'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['ignore', 'ignore_ament_install']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'ignore'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'ignore_ament_install'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['colcon_pkg']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'colcon_pkg'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['colcon_meta']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'colcon_meta'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['ros']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['cmake', 'python']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'python'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extensions ['python_setup_py']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/Avalonia) by extension 'python_setup_py'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['ignore', 'ignore_ament_install']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'ignore'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'ignore_ament_install'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['colcon_pkg']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'colcon_pkg'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['colcon_meta']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'colcon_meta'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['ros']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['cmake', 'python']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'python'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extensions ['python_setup_py']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/ref) by extension 'python_setup_py'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['ignore', 'ignore_ament_install']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'ignore'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'ignore_ament_install'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['colcon_pkg']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'colcon_pkg'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['colcon_meta']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'colcon_meta'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['ros']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'ros'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['cmake', 'python']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'python'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extensions ['python_setup_py']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/RoKiSim_Desktop/obj/Debug/net8.0/refint) by extension 'python_setup_py'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extension 'ignore'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extension 'ignore_ament_install'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extensions ['colcon_pkg']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extension 'colcon_pkg'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extensions ['colcon_meta']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extension 'colcon_meta'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extensions ['ros']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/roki_gazebo) by extension 'ros'
+[0.504s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roki_gazebo' with type 'ros.ament_cmake' and name 'roki_gazebo'
+[0.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.504s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.534s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.534s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.544s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_cpp_ws/install
+[0.545s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/main/circ_ws/install
+[0.545s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_sablon_ws/install
+[0.545s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/main/real_rover_ws_gi/install
+[0.546s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/main/ros2_ws/install
+[0.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_ws_5/install
+[0.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_ws_first/install
+[0.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_ws_4/install
+[0.547s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/turtlesim_ws3/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/main/ros2_ws3/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/main/turtlebot3_ws_1/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/main/ros2_ws_1/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_ws_p/install
+[0.548s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/main/real_rover_ws/install
+[0.549s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/minato_ws/install
+[0.549s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/rover_ws/install
+[0.549s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/main/ros2_ws_tank/install
+[0.549s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/main/ika_ws/install
+[0.550s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 517 installed packages in /opt/ros/humble
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'roki_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.625s] DEBUG:colcon.colcon_core.verb:Building package 'roki_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/main/roki_ws/build/roki_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/main/roki_ws/install/roki_gazebo', 'merge_install': False, 'path': '/home/main/roki_ws/src/roki_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.625s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.626s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.627s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/main/roki_ws/src/roki_gazebo' with build type 'ament_cmake'
+[0.627s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/main/roki_ws/src/roki_gazebo'
+[0.633s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.633s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.633s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main/roki_ws/build/roki_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake /home/main/roki_ws/src/roki_gazebo -DCMAKE_INSTALL_PREFIX=/home/main/roki_ws/install/roki_gazebo
+[1.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main/roki_ws/build/roki_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake /home/main/roki_ws/src/roki_gazebo -DCMAKE_INSTALL_PREFIX=/home/main/roki_ws/install/roki_gazebo
+[1.458s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main/roki_ws/build/roki_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/main/roki_ws/build/roki_gazebo -- -j12 -l12
+[1.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main/roki_ws/build/roki_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/main/roki_ws/build/roki_gazebo -- -j12 -l12
+[1.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/main/roki_ws/build/roki_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/main/roki_ws/build/roki_gazebo
+[1.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roki_gazebo)
+[1.531s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/main/roki_ws/build/roki_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/main/circ_ws/install/circ_autonomy:/home/main/ros2_sablon_ws/install/temel_paket:/home/main/ika_ws/install/ika_bot_nodes:/home/main/real_rover_ws/install/rover_description:/home/main/real_rover_ws/install/rover_bringup:/home/main/real_rover_ws_gi/install/rover_kamera:/home/main/real_rover_ws_gi/install/gesture_control:/home/main/ros2_ws_tank/install/tank_bot_sim:/home/main/ros2_ws_5/install/vision_pkg:/home/main/ros2_ws_4/install/benim_ilk_paketim:/home/main/ros2_ws_1/install/lidar_py_pkg:/home/main/ros2_ws3/install/simple_py_pkg:/home/main/turtlesim_ws3/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/main/roki_ws/build/roki_gazebo
+[1.539s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo' for CMake module files
+[1.539s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo' for CMake config files
+[1.540s] Level 1:colcon.colcon_core.shell:create_environment_hook('roki_gazebo', 'cmake_prefix_path')
+[1.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.ps1'
+[1.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.dsv'
+[1.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.sh'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/bin'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib/pkgconfig/roki_gazebo.pc'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib/python3.10/site-packages'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/bin'
+[1.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.ps1'
+[1.543s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.dsv'
+[1.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.sh'
+[1.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.bash'
+[1.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.zsh'
+[1.547s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main/roki_ws/install/roki_gazebo/share/colcon-core/packages/roki_gazebo)
+[1.548s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roki_gazebo)
+[1.548s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo' for CMake module files
+[1.548s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo' for CMake config files
+[1.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('roki_gazebo', 'cmake_prefix_path')
+[1.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.ps1'
+[1.548s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.dsv'
+[1.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/hook/cmake_prefix_path.sh'
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib'
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/bin'
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib/pkgconfig/roki_gazebo.pc'
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/lib/python3.10/site-packages'
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/main/roki_ws/install/roki_gazebo/bin'
+[1.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.ps1'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.dsv'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.sh'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.bash'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/main/roki_ws/install/roki_gazebo/share/roki_gazebo/package.zsh'
+[1.551s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/main/roki_ws/install/roki_gazebo/share/colcon-core/packages/roki_gazebo)
+[1.551s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.551s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.551s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.552s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.562s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.562s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.562s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.581s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.582s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main/roki_ws/install/local_setup.ps1'
+[1.583s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/main/roki_ws/install/_local_setup_util_ps1.py'
+[1.584s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main/roki_ws/install/setup.ps1'
+[1.586s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main/roki_ws/install/local_setup.sh'
+[1.587s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/main/roki_ws/install/_local_setup_util_sh.py'
+[1.588s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main/roki_ws/install/setup.sh'
+[1.590s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main/roki_ws/install/local_setup.bash'
+[1.590s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main/roki_ws/install/setup.bash'
+[1.592s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/main/roki_ws/install/local_setup.zsh'
+[1.593s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/main/roki_ws/install/setup.zsh'

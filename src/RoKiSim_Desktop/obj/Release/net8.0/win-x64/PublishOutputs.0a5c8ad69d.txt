@@ -1,0 +1,7 @@
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/RoKiSim_Desktop.pdb
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/av_libglesv2.dll
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/libHarfBuzzSharp.dll
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/libHarfBuzzSharp.pdb
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/libSkiaSharp.dll
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/libSkiaSharp.pdb
+/home/main/roki_ws/src/RoKiSim_Desktop/bin/Release/net8.0/win-x64/publish/RoKiSim_Desktop.exe

@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- WORKBENCH -->
+    <model name="workbench">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="table_top">
+        <pose>0.5 0 0.8 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.5 1.0 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.5 1.0 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      
+      <!-- Table Legs -->
+      <link name="leg1">
+        <pose>1.2 0.45 0.4 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+          <material><script><name>Gazebo/Grey</name></script></material>
+        </visual>
+      </link>
+      <link name="leg2">
+        <pose>1.2 -0.45 0.4 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+          <material><script><name>Gazebo/Grey</name></script></material>
+        </visual>
+      </link>
+      <link name="leg3">
+        <pose>-0.2 0.45 0.4 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+          <material><script><name>Gazebo/Grey</name></script></material>
+        </visual>
+      </link>
+      <link name="leg4">
+        <pose>-0.2 -0.45 0.4 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.05 0.05 0.8</size></box>
+          </geometry>
+          <material><script><name>Gazebo/Grey</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- TEST CUBE -->
+    <model name="test_cube">
+      <pose>0.6 0 0.85 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.001</ixx> <ixy>0</ixy> <ixz>0</ixz> <iyy>0.001</iyy> <iyz>0</iyz> <izz>0.001</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box><size>0.05 0.05 0.05</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.05 0.05 0.05</size></box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

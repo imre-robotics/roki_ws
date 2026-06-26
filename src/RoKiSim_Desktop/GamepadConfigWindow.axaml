@@ -1,0 +1,92 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:RoKiSim_Desktop"
+        x:Class="RoKiSim_Desktop.GamepadConfigWindow"
+        Title="Gamepad Configuration"
+        Width="1000" Height="700"
+        Background="#0a0a0a"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="350"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Left: Gamepad Image and Overlays -->
+        <Grid Grid.Column="0">
+            <Image Source="avares://RoKiSim_Desktop/Assets/gamepad_controller.png" Stretch="Uniform" Margin="20"/>
+            
+            <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20">
+                <!-- Left Stick X -->
+                <Border Canvas.Left="160" Canvas.Top="450" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="L-Stick X Axis" Foreground="#f1c40f" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbAxis0" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Left Stick Y -->
+                <Border Canvas.Left="160" Canvas.Top="520" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="L-Stick Y Axis" Foreground="#f1c40f" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbAxis1" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Right Stick X -->
+                <Border Canvas.Left="350" Canvas.Top="450" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="R-Stick X Axis" Foreground="#f1c40f" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbAxis3" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Right Stick Y -->
+                <Border Canvas.Left="350" Canvas.Top="520" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="R-Stick Y Axis" Foreground="#f1c40f" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbAxis4" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Button A (0) -->
+                <Border Canvas.Left="450" Canvas.Top="350" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="Button A" Foreground="#2ecc71" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbBtn0" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Button LB (4) -->
+                <Border Canvas.Left="130" Canvas.Top="140" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="Button LB" Foreground="#e74c3c" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbBtn4" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Button RB (5) -->
+                <Border Canvas.Left="390" Canvas.Top="140" Background="#aa000000" Padding="5" CornerRadius="4">
+                    <StackPanel>
+                        <TextBlock Text="Button RB" Foreground="#e74c3c" FontWeight="Bold" FontSize="11" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="cmbBtn5" Width="130" FontSize="11"/>
+                    </StackPanel>
+                </Border>
+            </Canvas>
+        </Grid>
+        
+        <!-- Right: Info / Summary -->
+        <Border Grid.Column="1" Background="#111" BorderBrush="#333" BorderThickness="1,0,0,0" Padding="30">
+            <StackPanel>
+                <TextBlock Text="KONTROLLERİ ÖZELLEŞTİR" Foreground="White" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+                
+                <TextBlock Text="Atanabilir Eylemler:" Foreground="#aaa" Margin="0,0,0,10"/>
+                <TextBlock Text="• None (İşlem Yok)&#x0a;• MoveX (İleri-Geri X)&#x0a;• MoveY (Sağa-Sola Y)&#x0a;• MoveZ (Aşağı-Yukarı Z)&#x0a;• MoveJ1 (1. Eksen)&#x0a;• MoveJ2 (2. Eksen)&#x0a;• MoveJ3 (3. Eksen)&#x0a;• MoveJ4 (4. Eksen)&#x0a;• MoveJ5 (5. Eksen)&#x0a;• MoveJ6 (6. Eksen)&#x0a;• MoveJ7 (Ray Ekseni)&#x0a;• GripperOpen (Çene Aç)&#x0a;• GripperClose (Çene Kapat)&#x0a;• HomePosition (Sıfırla)" 
+                           Foreground="#888" FontFamily="Consolas" LineHeight="20" Margin="0,0,0,30"/>
+
+                <Button x:Name="btnSave" Content="AYARLARI KAYDET" Background="#2ecc71" Foreground="Black" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Height="50" CornerRadius="5"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
