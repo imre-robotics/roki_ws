@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoKiSim_Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91b141a99921e824d3e42a5bc2f8fda7e211d1cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoKiSim_Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoKiSim_Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

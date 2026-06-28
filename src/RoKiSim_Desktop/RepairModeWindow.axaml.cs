@@ -19,6 +19,7 @@ namespace RoKiSim_Desktop
     public partial class RepairModeWindow : Window
     {
         private string? _apiKey;
+        private string? _userName;
         private string? _selectedImagePath;
         private readonly HttpClient _httpClient = new HttpClient();
         
@@ -35,7 +36,7 @@ namespace RoKiSim_Desktop
         public RepairModeWindow()
         {
             InitializeComponent();
-            LoadApiKey();
+            LoadSettings();
         }
 
         protected override void OnOpened(EventArgs e)
@@ -44,11 +45,8 @@ namespace RoKiSim_Desktop
             
             string greeting = "Merhaba efendim! Bugün ne tamir ediyoruz? 📸 Bana arızalı parçanın fotoğrafını gönderebilir veya 📱 Telefon Bağla butonuyla telefonundan direkt çekebilirsiniz.";
             AddMessageToChat("Jarvis", greeting, isUser: false);
-            
-            // Add the greeting to conversation history so Gemini knows the context
-            _conversationHistory.Add(new { role = "model", parts = new[] { new { text = greeting } } });
-            
-            Task.Run(() => SpeakText("Merhaba efendim! Bugün ne tamir ediyoruz?"));
+            // Sohbeti başlatan ilk karşılama mesajını şimdilik Login ekranında gizleyelim
+            // OnLoginClick içinde _userName belli olduktan sonra atacağız.
         }
 
         protected override void OnClosing(WindowClosingEventArgs e)
@@ -57,23 +55,92 @@ namespace RoKiSim_Desktop
             StopPhoneServer();
         }
 
-        private void LoadApiKey()
+        private string GetSettingsPath()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "user_settings.json");
+            // Geriye dönük uyumluluk veya geliştirme ortamı için fallback
+            if (!File.Exists(path))
+            {
+                string devPath = "/home/main/roki_ws/src/RoKiSim_Desktop/user_settings.json";
+                if (File.Exists(devPath)) return devPath;
+            }
+            return path;
+        }
+
+        private void LoadSettings()
         {
             try
             {
-                string keyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "api_key.txt");
-                if (!File.Exists(keyPath))
-                    keyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../api_key.txt");
-                if (!File.Exists(keyPath))
-                    keyPath = "/home/main/roki_ws/src/RoKiSim_Desktop/api_key.txt";
-
-                if (File.Exists(keyPath))
-                    _apiKey = File.ReadAllText(keyPath).Trim();
+                string path = GetSettingsPath();
+                if (File.Exists(path))
+                {
+                    string json = File.ReadAllText(path);
+                    using var doc = System.Text.Json.JsonDocument.Parse(json);
+                    var root = doc.RootElement;
+                    if (root.TryGetProperty("UserName", out var nameProp))
+                    {
+                        _userName = nameProp.GetString();
+                        var nameBox = this.FindControl<TextBox>("LoginNameTextBox");
+                        if (nameBox != null) nameBox.Text = _userName;
+                    }
+                    if (root.TryGetProperty("ApiKey", out var keyProp))
+                    {
+                        _apiKey = keyProp.GetString();
+                        var keyBox = this.FindControl<TextBox>("LoginApiKeyTextBox");
+                        if (keyBox != null) keyBox.Text = _apiKey;
+                    }
+                }
+                else 
+                {
+                    // Eski api_key.txt dosyası varsa onu okuyalım
+                    string oldKeyPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "api_key.txt");
+                    if (File.Exists(oldKeyPath))
+                    {
+                        _apiKey = File.ReadAllText(oldKeyPath).Trim();
+                        var keyBox = this.FindControl<TextBox>("LoginApiKeyTextBox");
+                        if (keyBox != null) keyBox.Text = _apiKey;
+                    }
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("API Key Load Error: " + ex.Message);
+                Console.WriteLine("Settings Load Error: " + ex.Message);
             }
+        }
+
+        private void OnLoginClick(object? sender, RoutedEventArgs e)
+        {
+            var nameBox = this.FindControl<TextBox>("LoginNameTextBox");
+            var keyBox = this.FindControl<TextBox>("LoginApiKeyTextBox");
+            
+            _userName = nameBox?.Text?.Trim();
+            _apiKey = keyBox?.Text?.Trim();
+
+            if (string.IsNullOrEmpty(_userName) || string.IsNullOrEmpty(_apiKey))
+            {
+                return; // Basit doğrulama, boş bırakılamaz
+            }
+
+            try
+            {
+                string path = GetSettingsPath();
+                if (!File.Exists(path)) path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "user_settings.json");
+                
+                var data = new { UserName = _userName, ApiKey = _apiKey };
+                string json = System.Text.Json.JsonSerializer.Serialize(data);
+                File.WriteAllText(path, json);
+            }
+            catch (Exception ex) { Console.WriteLine("Save Error: " + ex.Message); }
+
+            var overlay = this.FindControl<Border>("LoginOverlay");
+            if (overlay != null) overlay.IsVisible = false;
+
+            // Karşılama mesajını şimdi atalım
+            string greeting = $"Merhaba {_userName}! Ben RoKiSim yapay zeka asistanı Jarvis. Fanuc robot ile ilgili bir arıza mı var, yoksa üretim hattında bir sorun mu gözlemliyorsun?";
+            AddMessageToChat("Jarvis", greeting, isUser: false);
+            _conversationHistory.Add(new { role = "model", parts = new[] { new { text = greeting } } });
+            
+            Task.Run(() => SpeakText($"Merhaba {_userName}! Ben Jarvis. Fanuc robot ile ilgili bir arıza mı var, yoksa üretim hattında bir sorun mu gözlemliyorsun?"));
         }
 
         // ━━━━━━━━━━━━━ PHONE SERVER ━━━━━━━━━━━━━
@@ -510,7 +577,8 @@ namespace RoKiSim_Desktop
             _conversationHistory.Add(new { role = "user", parts = userParts });
 
             // System instruction
-            string sysInstruction = "Sen Jarvis'sin, Tony Stark'ın yapay zekasısın. Kullanıcı alet, cihaz veya elektronik tamir ediyor ve senden yardım istiyor. Çok bilgili, yardımsever ve nazik bir asistansın. Her zaman Türkçe konuş. Fotoğraf gönderilirse fotoğraftaki parçayı veya arızayı detaylıca analiz et ve adım adım tamir talimatları ver. Gerekli aletleri listele. Güvenlik uyarılarını da belirt.";
+            string safeName = string.IsNullOrEmpty(_userName) ? "Mühendis" : _userName;
+            string sysInstruction = $"Sen RoKiSim Fabrikasının akıllı yapay zeka asistanı Jarvis'sin. Karşındaki mühendisin adı: {safeName}. Ona her zaman ismiyle hitap et ve profesyonel, yardımsever ancak 'Tony Stark'ın asistanı' gibi sofistike bir ton kullan. Her zaman Türkçe konuş. Kullanıcı Fanuc endüstriyel robot kollarını onarıyor, üretim hattındaki cihazlarla ilgileniyor veya senden hata logları/fotoğraflar ile ilgili analiz istiyor. Fotoğraf gönderilirse fotoğraftaki parçayı, PLC arızasını veya robot kolu kırığını detaylıca analiz et. Adım adım, net tamir talimatları ver. Gerekli teknik aletleri listele ve endüstriyel güvenlik uyarılarını kesinlikle belirt.";
 
             var requestBody = new
             {

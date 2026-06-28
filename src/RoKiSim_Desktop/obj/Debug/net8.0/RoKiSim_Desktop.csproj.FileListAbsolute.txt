@@ -119,3 +119,4 @@
 /home/main/roki_ws/src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib
 /home/main/roki_ws/src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/unix/lib/net8.0/System.IO.Ports.dll
 /home/main/roki_ws/src/RoKiSim_Desktop/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.IO.Ports.dll
+/home/main/roki_ws/src/RoKiSim_Desktop/obj/Debug/net8.0/RoKiSim_Desktop.sourcelink.json
